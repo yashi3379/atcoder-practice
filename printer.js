@@ -13,30 +13,24 @@ function Main(input) {
 
     let left = 0;
     //最大値はnumArrayの最後の値とKをかけたもの
-    let right = numArray[numArray.length - 1] * K;
-    while (left <= right) {
+    let right = numArray[numArray.length-1]*K;
+    while(left <= right){
         let mid = Math.floor((left + right) / 2);
-        //例でいうと0+28/2=14 二回目は0+13/2=6 三回目は6+13/2=9　四回目は6+8/2=7 
-
         let sum = 0;
-        for (let i = 0; i < N; i++) {
-            sum += Math.floor(mid / numArray[i]);
-            //例でいうと14/2+14/3+14/4=7+4+3=14　二回目は6/2+6/3+6/4=3+2+1=6
-            //三回目は9/2+9/3+9/4=4+3+2=9　四回目は7/2+7/3+7/4=3.5+2.3+1.75=7
+        for(let i=0; i<N; i++){
+            sum += Math.floor(mid/numArray[i]);
         }
-        if (sum >= K) {
-            right = mid - 1;//14-1=13 9-1=8 7+1=6 
-        } else {
-            left = mid + 1;//6+1=7 6+1=7
-
+        if(sum >= K){
+            right = mid - 1;
+        }else{
+            left = mid + 1;
+        }
     }
-
-}
-if (left > right) {
-    console.log(left);
-} else {
-    console.log(right);
-}
+    if(left > right){
+        console.log(left);
+    }else{
+        console.log(right);
+    }
 
 }
 

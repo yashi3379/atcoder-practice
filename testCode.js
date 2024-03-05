@@ -22,8 +22,8 @@ const oneString = (str) => {
     } else {
         if (strSplice[1] == strSplice[2]) {
             result.push(strSplice[0]);
-        }else{
-           const arr = [...strSplice];
+        } else {
+            const arr = [...strSplice];
             result.push(arr);
         }
     }
@@ -38,26 +38,26 @@ const oneString = (str) => {
 //3番目のdが被っていたら4番目のdをループさせるのは無駄な処理
 //被っていた場合、配列doubleにpush
 //毎回被っているdoubleと比較してなかったらループさせる
-const oneString2 = (str) =>{
+const oneString2 = (str) => {
     const strSplice = str.slice('');
     const result = [];
-    const double =[];
-    for (let i =0;i<strSplice.length; i++){
-    	let trueFlag = true
-    	if(double.includes(strSplice[i])){
-    		break;
-    	}
-    	for(let j = i+1; j<strSplice.length; j++){
-    		if(strSplice[i]==strSplice[j] ){
-    			trueFlag = false;
-    			break;
-    	}
-    	if(trueFlag){
-    		result.push(strSplice[i])
-    	}else{
-    		double.push(strSplice[i])
-    	}		
+    const double = [];
+    for (let i = 0; i < strSplice.length; i++) {
+        let trueFlag = true
+        if (double.includes(strSplice[i])) {
+            break;
+        }
+        for (let j = i + 1; j < strSplice.length; j++) {
+            if (strSplice[i] == strSplice[j]) {
+                trueFlag = false;
+                break;
+            }
+            if (trueFlag) {
+                result.push(strSplice[i])
+            } else {
+                double.push(strSplice[i])
+            }
+        }
     }
-}
-return [...result];
+    return [...result];
 }

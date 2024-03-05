@@ -2,12 +2,15 @@
 function Main(input) {
     // 1行目がinput[0], 2行目がinput[1], …に入る
     input = input.split("\n");
-    tmp = input[1].split(" ");
+    const[A, B] = input[0].split(" ").map(Number);
     //文字列から10進数に変換するときはparseIntを使います
-    var a = parseInt(input[0], 10);
-   
-    //出力
-    console.log(result);
+    const total = A + B;
+
+    if(total === 4){
+        console.log(5);
+    }else {
+        console.log(4);
+    }
 }
 
 
