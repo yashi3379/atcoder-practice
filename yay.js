@@ -19,10 +19,13 @@ function Main(input) {
                 break;
             }
         }
+    //一番目と二番目が同じで三番目が違う
     }else if(first === second && second !== third){
         result = 3;
+    //一番目と三番目が同じで二番目が違う
     }else if(first === third && second !== third){
         result = 2;
+    //二番目と三番目が同じで一番目が違う
     }else {
         result = 1;
     }

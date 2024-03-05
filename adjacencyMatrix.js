@@ -2,12 +2,19 @@
 function Main(input) {
     // 1行目がinput[0], 2行目がinput[1], …に入る
     input = input.split("\n");
-    tmp = input[1].split(" ");
+    const N = parseInt(input[0], 10);   
     //文字列から10進数に変換するときはparseIntを使います
-    var a = parseInt(input[0], 10);
+    for(let i = 1; i<= N; i++){
+        let result = [];
+        const tmp = input[i].split(" ").map(Number);
+        for(let j = 0; j< N; j++){
+            if( tmp[j] === 1){
+                result.push(j+1);
+            }
+        }
+        console.log(result.join(" "));
+    }
    
-    //出力
-    console.log(result);
 }
 
 
