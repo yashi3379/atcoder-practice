@@ -14,9 +14,9 @@ function findMinimumTime(N, A, B) {
     return dp[N]; // 部屋Nに到達する最短時間=8
 }
 
-// 入力例
-const N = 5;
-const A = [2, 4, 1, 3];
-const B = [5, 3, 7];
+// // 入力例
+// const N = 5;
+// const A = [2, 4, 1, 3];
+// const B = [5, 3, 7];
 
-console.log(findMinimumTime(N, A, B)); // 出力例：8
+// console.log(findMinimumTime(N, A, B)); // 出力例：8
